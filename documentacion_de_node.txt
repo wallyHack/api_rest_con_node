@@ -1,0 +1,9 @@
+
+- describe el proyecto
+npm init --yes
+
+- instalamos el framework express y el modulo morgan 
+express -> framework backend de javascript
+morgan  -> modulo para ver por consola las peticiones que van llegando
+
+npm i express morgan 
