@@ -7,3 +7,24 @@ express -> framework backend de javascript
 morgan  -> modulo para ver por consola las peticiones que van llegando
 
 npm i express morgan 
+
+- creamos la carpeta src donde va el código fuente
+mkdir src
+
+- corremos la aplicación
+node src/index.js
+
+middlware -> función que procesa datos antes de que el servidor los reciba
+
+- instalamos un modulo llamado "nodemon" para que reinicie el servidor cuando quiera
+npm i nodemon -D
+
+- en scripts -> package.json creamos el comando dev
+"dev": "nodemon src/index.js"
+
+- corremos el proyecto
+npm run dev
+
+- organizamos mejor las rutas en un archivo diferente, para que sea mas entendible
+
+- simulamos una DB con un archivo .json
