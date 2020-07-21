@@ -28,3 +28,39 @@ npm run dev
 - organizamos mejor las rutas en un archivo diferente, para que sea mas entendible
 
 - simulamos una DB con un archivo .json
+
+- express validators -> compueba que se reciben los datos correctamente
+
+- creamos en un nuevo archivo las rutas GET, POST, PUT, DELETE, las cuales trabajan 
+con objetos json
+
+-> para petición POST modificamos en postman las headers y el body
+HEADERS
+key:   Content-Type
+Value: application/json
+
+BODY
+{
+    "title": "Shrek",
+    "director": "Cameron Diaz",
+    "year": 2006,
+    "rating": 9.5 
+}
+
+-> para petición PUT y DELETE necesitamos pasarle el id como parametro
+router.delete('/:id', (req, res) =>{});
+router.put('/:id', (req, res) =>{});
+
+-> para poder eliminar un objeto json instalamos la libreria underscore
+npm i underscore
+
+- libreria underscore -> sirve para iterar listar y arrays
+
+-> consultamos una API rest externa desde nuestro servidor con un módulo llamado
+node-fetch
+
+-> jsonplaceholder: ejemplos de API rest y como consultarlas
+router.get('/', async (req, res) =>{
+    await fetch('https://jsonplaceholder.typicode.com/users');
+    res.send('Users');
+});
